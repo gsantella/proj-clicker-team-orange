@@ -2061,12 +2061,9 @@ input, select, textarea {
   #moveEmail
   {
    position:relative;
-   left: 48%;
+   left: 30px;
   }
-  #moveSignButton
-  {
-      left:44%;
-  }
+  
 	textarea {
 		padding: 0.75em 1em;
 	}
