@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+.horzvert-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.flex-display {
+  display: flex;
+}
+
+.flex-display > form {
+  align-items: flex-start;
+  position: relative;
+  width: 300px;
+  padding: 15px;
+}
+
+.flex-display > form > h1 {
+  margin-bottom: 35px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Arial;
+}
+.flex-display > form > button {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  height: 35px;
+}
