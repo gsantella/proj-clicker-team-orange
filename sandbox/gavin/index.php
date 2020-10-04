@@ -4,6 +4,14 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<script>
+  var ct = 0;
+  function clicker()
+  {
+      ct += 1;
+      document.getElementById('changeThis').innerHTML = ct;
+  }
+</script>
 <html>
 	<head>
 		<title>Button presser</title>
@@ -27,9 +35,14 @@
           <h4  align="center">Email:</h4>
           <input align="center" class="" type="text" value=""><br>
          
-          <button id="moveThis" type="button" onclick="unlock()">
+          <button class="moveThis" type="button" onclick="unlock()">
            Sign in
-          </button><br><br>
+          </button><br><br><br>
+          <button class="moveThis" id="clicker" type="button" onclick="clicker()">
+           Click
+          </button>
+          <h2 class="clickOutput" id="changeThis"></h2>
+
 
 			</div>
 

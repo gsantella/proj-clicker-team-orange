@@ -2064,10 +2064,15 @@ input, select, textarea {
    position:relative;
    left: 30px;
   }
-  #moveThis
+  .moveThis
   {
     position:relative;
     left:45%;
+  }
+  .clickOutput
+  {
+    position:absolute;
+    left:49.3%;
   }
   #centerSign
   {
