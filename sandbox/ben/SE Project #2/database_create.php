@@ -10,4 +10,14 @@
     print_r($name1["email"]);
 
     $db->query("INSERT INTO signin (email) VALUES ('$makeEmail')");
+
+    $query = "SELECT username from my_table where username='bob'";
+    $result = mysql_query($query);
+
+    if(mysql_num_rows($result) > 0)
+    {
+        // row exists. do whatever you would like to do.
+    }
+
+
 ?>
