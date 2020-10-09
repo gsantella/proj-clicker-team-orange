@@ -10,13 +10,14 @@ $results = $db->query("SELECT * FROM signin");
     <head> </head>
     <body>
         <?php
-        /*$name = $results->fetchArray(SQLITE3_ASSOC);
+        $name = $results->fetchArray(SQLITE3_ASSOC);
 
         echo "\n";
         echo "Email: " . $name["email"];
-        echo "\n"; */
+        echo "\n"; 
         //needs to be fixed to display increasing number of emails
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 10; $i++) {
+
             echo "\n";
             $name = $results->fetchArray(SQLITE3_ASSOC);
 
