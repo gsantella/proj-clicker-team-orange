@@ -33,7 +33,7 @@
 					</header>
           
           <h4  align="center">Email:</h4>
-          <input align="center" class="" type="text" value=""><br>
+          <input align="center" class="" id="email" type="text" value=""><br>
          
           <button class="moveThis" type="button" onclick="unlock()">
            Sign in
