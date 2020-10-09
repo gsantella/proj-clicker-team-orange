@@ -2077,7 +2077,7 @@ input, select, textarea {
   #centerSign
   {
     position: relative;
-    left:0.5%;
+    left:.76%;
   }
 	textarea {
 		padding: 0.75em 1em;
