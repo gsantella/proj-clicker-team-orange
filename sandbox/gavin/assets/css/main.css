@@ -2069,10 +2069,20 @@ input, select, textarea {
     position:relative;
     left:45%;
   }
+  .moveEmail
+  {
+    position: relative;
+    text-align: center;
+  }
+  #email
+  {
+    position:relative;
+    text-align: center;
+  }
   .clickOutput
   {
-    position:absolute;
-    left:49.3%;
+    position:relative;
+    text-align: center;
   }
   #centerSign
   {

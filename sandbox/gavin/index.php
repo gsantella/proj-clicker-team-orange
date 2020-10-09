@@ -1,15 +1,18 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <script>
   var ct = 0;
   function clicker()
   {
       ct += 1;
       document.getElementById('changeThis').innerHTML = ct;
+  }
+  function giveEmail()
+  {
+    var email = document.getElementById('email').value;
+    //if(document.getElementById('email').)
+    document.getElementById('email1').innerHTML = "Currently signed in as " + email;
+    
   }
 </script>
 <html>
@@ -28,16 +31,17 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1 id="centerSign">Sign up Form</h1>
+						<h1 id="centerSign">Sign up/Sign in Form</h1>
 						
 					</header>
           
           <h4  align="center">Email:</h4>
           <input align="center" class="" id="email" type="text" value=""><br>
          
-          <button class="moveThis" type="button" onclick="unlock()">
+          <button class="moveThis" type="button" onclick="giveEmail()">
            Sign in
-          </button><br><br><br>
+          </button><br><br>
+          <div class="moveEmail" id="email1"></div><br><br>
           <button class="moveThis" id="clicker" type="button" onclick="clicker()">
            Click
           </button>
