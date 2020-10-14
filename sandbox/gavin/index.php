@@ -7,6 +7,12 @@
       ct += 1;
       document.getElementById('changeThis').innerHTML = ct;
   }
+  function signIn()
+  {
+      document.getElementById('email').value = "";
+
+      //more code here
+  }
 
 </script>
 <html>
@@ -32,7 +38,7 @@
           <h4  align="center">Email:</h4>
           <input align="center" class="" id="email" type="text" value=""><br>
          
-          <button class="moveThis" type="button" onclick="giveEmail()">
+          <button class="moveThis" type="button" onclick="signIn()">
            Sign in
           </button><br><br>
           <div class="moveEmail" id="email1"></div><br><br>
