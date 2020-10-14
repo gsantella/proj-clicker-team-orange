@@ -18,10 +18,15 @@ else
 {
 	echo "Connected! \n";
 }
- 
+
 // Attempt select query execution
 $makeEmail = $_POST["email"];
 
+$myJSON = json_encode($makeEmail);
+
+//check for duplicate
+//right now it doesnt allow you to enter duplicates 
+//should create an error message in the future
 $duplicate=mysqli_query($link,"select * from users where email='$makeEmail'");
 if (mysqli_num_rows($duplicate)>0)
 {
@@ -39,7 +44,7 @@ else{
 	  echo "Error: " . $sql . "<br>" . $link->error;
 	}
 }
- 
+
 // Close connection
 mysqli_close($link);
 ?>
