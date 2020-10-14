@@ -7,13 +7,7 @@
       ct += 1;
       document.getElementById('changeThis').innerHTML = ct;
   }
-  function giveEmail()
-  {
-    var email = document.getElementById('email').value;
-    //if(document.getElementById('email').)
-    document.getElementById('email1').innerHTML = "Currently signed in as " + email;
-    
-  }
+
 </script>
 <html>
 	<head>
