@@ -17,8 +17,7 @@ else
 {
 	echo "Connected! \n";
 }
- 
-// Attempt select query execution
+
 $sql = "SELECT * FROM users";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
@@ -44,30 +43,47 @@ if($result = mysqli_query($link, $sql)){
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
- 
-// Close connection
-mysqli_close($link);
-?>
 
+
+//right now this will only work for row 1 but I will add it so any email entered will be found]
+
+
+$sql = "SELECT clicks FROM users WHERE Id = 1";
+
+$result= mysqli_query($link, $sql);
+//converts SQL object into string
+$clickNum = mysqli_fetch_row($result);
+$clickNum = $clickNum[0];
+
+$clickNum++;
+
+
+$sql = "UPDATE users SET clicks = $clickNum WHERE Id = 1";
+
+	if ($link->query($sql) === TRUE) {
+	  echo "New record created successfully";
+	} else {
+	  echo "Error: " . $sql . "<br>" . $link->error;
+	}
+
+
+
+
+
+?>
 
 <!DOCTYPE html>
 <head>
     <title>Php database </title>
     <link rel="stylesheet" href="./css/index-style.css">
 </head>
-<body>
-<br>
-	<form action="database_create.php" method="post">
-        <label for="email"> Email:
-        <input name="email"> </input><br>
+    <body>
+        <br>
+        <form action="database_login.php" method="post">
+            <button name="click">Click!</button>
 
-        <button name="add"> Add Record</button>
-    </form>
-<hr>
-    <form action="database_login.php" method="post">      
-        <button name="add">Play!</button>
-    </form>
-	
-	
-</body>
+        </form>
+        
+    </body>
 </html>
+
