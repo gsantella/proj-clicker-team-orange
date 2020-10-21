@@ -44,11 +44,11 @@ if($result = mysqli_query($link, $sql)){
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 
-
 //right now this will only work for row 1 but I will add it so any email entered will be found]
 
+$getEmail = $_POST["emailLogin"];
 
-$sql = "SELECT clicks FROM users WHERE Id = 1";
+$sql = "SELECT clicks FROM users WHERE id= 1";
 
 $result= mysqli_query($link, $sql);
 //converts SQL object into string
@@ -66,10 +66,6 @@ $sql = "UPDATE users SET clicks = $clickNum WHERE Id = 1";
 	  echo "Error: " . $sql . "<br>" . $link->error;
 	}
 
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +75,7 @@ $sql = "UPDATE users SET clicks = $clickNum WHERE Id = 1";
 </head>
     <body>
         <br>
-        <form action="database_login.php" method="post">
+        <form action="database_login.php" method="post" target="_blank">
             <button name="click">Click!</button>
 
         </form>

@@ -64,8 +64,10 @@ mysqli_close($link);
         <button name="add"> Add Record</button>
     </form>
 <hr>
-    <form action="database_login.php" method="post">      
-        <button name="add">Play!</button>
+    <form action="database_login.php" method="post">
+        <label for="emailLogin"> Login:
+        <input name="emailLogin"> </input><br>
+        <button name="login">Play!</button>
     </form>
 	
 	
